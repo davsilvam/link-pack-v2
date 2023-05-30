@@ -5,13 +5,13 @@
     href: string
   }
 
-  const props = defineProps<LinkButtonProps>()
+  defineProps<LinkButtonProps>()
 </script>
 
 <template>
   <a
-    v-bind="props"
-    class="w-full rounded-lg border-2 border-secondary-50 py-7 px-6 font-semibold text-secondary-50 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg hover:shadow-secondary-50/20"
+    class="flex w-full items-center justify-center rounded-lg bg-dawn/10 p-4 font-medium hover:bg-dawn/20"
+    :href="href"
   >
     <slot></slot>
   </a>

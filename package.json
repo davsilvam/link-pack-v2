@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-vue-next": "^0.224.0",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.5",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",

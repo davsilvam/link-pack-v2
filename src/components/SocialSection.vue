@@ -1,21 +1,21 @@
 <script lang="ts" setup>
-  import IconGitHub from './IconGitHub.vue'
-  import IconInstagram from './IconInstagram.vue'
-  import IconLinkedin from './IconLinkedin.vue'
+  import { Github, Instagram, Linkedin } from 'lucide-vue-next'
 </script>
 
 <template>
   <div
-    class="flex items-center gap-10 pt-8 [&>a:hover]:-translate-y-2 [&>a]:transition-all"
+    class="flex w-full items-center justify-center gap-16 [&>a:hover]:-translate-y-2 [&>a]:transition-all"
   >
     <a href="https://www.instagram.com/davsilvam_/">
-      <IconInstagram class="w-8" />
+      <Instagram class="h-8 w-8" />
     </a>
+
     <a href="https://www.linkedin.com/in/davsilvam/">
-      <IconLinkedin class="w-8" />
+      <Linkedin class="h-8 w-8" />
     </a>
+
     <a href="https://github.com/davsilvam">
-      <IconGitHub class="w-8" />
+      <Github class="h-8 w-8" />
     </a>
   </div>
 </template>
