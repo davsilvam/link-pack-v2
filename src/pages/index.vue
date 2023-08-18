@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-  import { RouterLink } from 'vue-router'
-  import AppHeader from '../components/AppHeader.vue'
-  import SocialSection from '../components/SocialSection.vue'
-  import LinkSection from '../components/LinkSection.vue'
-  import LinkButton from '../components/LinkButton.vue'
+import { RouterLink } from 'vue-router'
+import AppHeader from '../components/AppHeader.vue'
+import SocialSection from '../components/SocialSection.vue'
+import LinkSection from '../components/LinkSection.vue'
+import LinkButton from '../components/LinkButton.vue'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { Github, Instagram, Linkedin } from 'lucide-vue-next'
+import { Github, Instagram, Linkedin } from 'lucide-vue-next'
 </script>
 
 <template>

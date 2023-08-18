@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-  import { AnchorHTMLAttributes } from 'vue'
+import { AnchorHTMLAttributes } from 'vue'
 
-  interface LinkButtonProps extends AnchorHTMLAttributes {
-    href: string
-  }
+interface LinkButtonProps extends AnchorHTMLAttributes {
+  href: string
+}
 
-  defineProps<LinkButtonProps>()
+defineProps<LinkButtonProps>()
 </script>
 
 <template>
@@ -13,6 +13,6 @@
     class="flex w-full items-center justify-center rounded-lg bg-dawn/10 p-4 font-medium hover:bg-dawn/20"
     :href="href"
   >
-    <slot></slot>
+    <slot />
   </a>
 </template>

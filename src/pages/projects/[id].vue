@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-  import { ref } from 'vue'
-  import { useRoute } from 'vue-router'
-  import { ArrowLeft, ArrowUpRight } from 'lucide-vue-next'
-  import { useProjects } from '../composables/useProjects'
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+import { ArrowLeft, ArrowUpRight } from 'lucide-vue-next'
+import { useProjects } from '../../composables/useProjects'
 
-  const { params } = useRoute()
-  const { projects } = useProjects()
+const route = useRoute()
+const { projects } = useProjects()
 
-  const project = ref(projects[Number(params.id)])
+const project = ref(projects[Number(route.params.id)])
 </script>
 
 <template>
@@ -16,8 +16,10 @@
       <ArrowLeft class="w-4" /> Voltar
     </RouterLink>
 
-    <img :src="project.banner_src" alt="" />
-    <h1 class="mt-8 text-xl font-semibold">{{ project.name }}</h1>
+    <img :src="project.banner_src" alt="">
+    <h1 class="mt-8 text-xl font-semibold">
+      {{ project.name }}
+    </h1>
     <p>{{ project.description }}</p>
 
     <div class="flex items-center justify-between">

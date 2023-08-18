@@ -1,5 +1,6 @@
-import winterman_banner_src from '../assets/winterman_banner.png'
-import link_pack_banner_src from '../assets/link_pack_banner.png'
+import wintermanBannerSrc from '../assets/winterman_banner.png'
+import linkPackBannerSrc from '../assets/link_pack_banner.png'
+import movieshelfBannerSrc from '../assets/movieshelf_banner.png'
 
 interface Project {
   name: string
@@ -15,21 +16,29 @@ export function useProjects() {
       name: 'Winterman',
       description:
         'O Winterman é um projeto criado com a Open Weather API, uma API de clima, e se baseia em um página que traz o clima da cidade que o usuário pesquisar.',
-      banner_src: winterman_banner_src,
+      banner_src: wintermanBannerSrc,
       github_href: 'https://github.com/davsilvam/winterman-app',
-      deploy_href: 'https://winterman-app.vercel.app'
+      deploy_href: 'https://winterman-app.vercel.app',
     },
     {
       name: 'Link Pack',
       description:
         'Agregador de links inspirado no Linktree. Ele serve para facilitar o fluxo do meu instagram para minhas demais redes.',
-      banner_src: link_pack_banner_src,
+      banner_src: linkPackBannerSrc,
       github_href: 'https://github.com/davsilvam/link-pack-v2',
-      deploy_href: 'https://linkpack.vercel.app'
-    }
+      deploy_href: 'https://linkpack.vercel.app',
+    },
+    {
+      name: 'Movieshelf',
+      description:
+        'A Movieshelf é uma aplicação que mostra filmes e suas informações, diretamente do catálogo do TMDB.',
+      banner_src: movieshelfBannerSrc,
+      github_href: 'https://github.com/davsilvam/movieshelf',
+      deploy_href: 'https://themovieshelf.vercel.app',
+    },
   ]
 
   return {
-    projects
+    projects,
   }
 }
