@@ -12,6 +12,7 @@ import LinkSection from '../components/LinkSection.vue'
   >
     <AppHeader />
     <SocialSection />
+
     <LinkSection>
       <RouterLink
         to="/projects/0"
@@ -38,7 +39,7 @@ import LinkSection from '../components/LinkSection.vue'
       </RouterLink>
     </LinkSection>
 
-    <RouterLink class="flex items-center gap-2 font-semibold" to="/">
+    <RouterLink to="/" class="flex items-center gap-2 font-semibold">
       <ArrowLeft class="w-4" /> Voltar
     </RouterLink>
   </div>

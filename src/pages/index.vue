@@ -10,14 +10,15 @@ import LinkButton from '../components/LinkButton.vue'
   <div class="flex w-full max-w-[450px] flex-col justify-center gap-12 p-6">
     <AppHeader />
     <SocialSection />
+
     <LinkSection>
       <LinkButton href="https://davidsilvam.vercel.app">
         Acesse meu Portfólio
       </LinkButton>
 
       <RouterLink
-        class="flex w-full items-center justify-center rounded-lg bg-dawn/10 p-4 font-medium hover:bg-dawn/20"
         to="/projects"
+        class="flex w-full items-center justify-center rounded-lg bg-dawn/10 p-4 font-medium hover:bg-dawn/20"
       >
         Confira os Projetos
       </RouterLink>
