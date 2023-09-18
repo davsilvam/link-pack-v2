@@ -1,13 +1,9 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { useRoute } from 'vue-router'
 import { ArrowLeft, ArrowUpRight } from 'lucide-vue-next'
-import { useProjects } from '../../composables/useProjects'
 
-const route = useRoute()
-const { projects } = useProjects()
+import { useProject } from '../../composables'
 
-const project = ref(projects[Number(route.params.id)])
+const { project } = useProject()
 </script>
 
 <template>
@@ -16,9 +12,10 @@ const project = ref(projects[Number(route.params.id)])
       <ArrowLeft class="w-4" /> Voltar
     </RouterLink>
 
-    <img :src="project.banner_src" :alt="`${project.name}'s banner.`">
+    <img v-if="project.banner_url" :src="project.banner_url" :alt="`${project.name}'s banner.`">
+    <div v-else class="h-40 w-full animate-pulse bg-dusk" />
 
-    <h1 class="mt-8 text-xl font-semibold">
+    <h1 class="mt-4 text-xl font-semibold">
       {{ project.name }}
     </h1>
 
@@ -26,14 +23,14 @@ const project = ref(projects[Number(route.params.id)])
 
     <div class="flex items-center justify-between">
       <a
-        :href="project.github_href"
+        :href="project.html_url"
         class="mt-3 flex items-center gap-2 font-semibold"
       >
         Ver repositório <ArrowUpRight class="w-4" />
       </a>
 
       <a
-        :href="project.deploy_href"
+        :href="project.homepage"
         class="mt-3 flex items-center gap-2 font-semibold"
       >
         Ver projeto <ArrowUpRight class="w-4" />

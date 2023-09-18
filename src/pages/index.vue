@@ -1,20 +1,18 @@
 <script lang="ts" setup>
 import { RouterLink } from 'vue-router'
-import AppHeader from '../components/AppHeader.vue'
-import SocialSection from '../components/SocialSection.vue'
-import LinkSection from '../components/LinkSection.vue'
-import LinkButton from '../components/LinkButton.vue'
+
+import { Header, Link, SocialSection } from '../components'
 </script>
 
 <template>
   <div class="flex w-full max-w-[450px] flex-col justify-center gap-12 p-6">
-    <AppHeader />
+    <Header />
     <SocialSection />
 
-    <LinkSection>
-      <LinkButton href="https://davidsilvam.vercel.app">
+    <Link.Section>
+      <Link.Button href="https://davidsilvam.vercel.app">
         Acesse meu Portfólio
-      </LinkButton>
+      </Link.Button>
 
       <RouterLink
         to="/projects"
@@ -22,6 +20,6 @@ import LinkButton from '../components/LinkButton.vue'
       >
         Confira os Projetos
       </RouterLink>
-    </LinkSection>
+    </Link.Section>
   </div>
 </template>
