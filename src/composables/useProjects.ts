@@ -11,7 +11,11 @@ export function useProjects() {
   })
 
   async function getUserRepositories() {
-    const { data } = await instance.get<Project[]>('https://api.github.com/users/davsilvam/repos')
+    const data = await instance.get<Project[]>('https://api.github.com/users/davsilvam/repos')
+      .then(({ data }) => {
+        return data.filter(project => project.name !== 'davsilvam')
+      })
+
     projects.value = data
   }
 
