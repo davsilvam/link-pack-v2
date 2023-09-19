@@ -2,8 +2,8 @@ import { onMounted, reactive } from 'vue'
 import { useRoute } from 'vue-router'
 import { z } from 'zod'
 
-import { useProjects } from '../composables'
 import { Project } from '../entities'
+import { instance } from '../services'
 
 interface ProjectDetails extends Project {
   banner_url: string
@@ -17,19 +17,18 @@ export function useProject() {
   const route = useRoute()
   const routeParams = paramsSchema.parse(route.params)
 
-  const { getUserRepository } = useProjects()
-
   const project: ProjectDetails = reactive({
-    description: '',
-    homepage: '',
-    html_url: '',
     id: 0,
     name: '',
+    description: '',
+    html_url: '',
+    homepage: '',
     banner_url: '',
   })
 
-  onMounted(async () => {
-    const { description, homepage, html_url, id, name } = await getUserRepository(routeParams.name)
+  async function getUserRepository(projectName: string) {
+    const { data } = await instance.get<Project>(`/${projectName}`)
+    const { description, homepage, html_url, id, name } = data
 
     project.description = description
     project.homepage = homepage
@@ -37,6 +36,10 @@ export function useProject() {
     project.id = id
     project.name = name
     project.banner_url = `https://raw.githubusercontent.com/davsilvam/${project.name}/main/.github/banner.png`
+  }
+
+  onMounted(() => {
+    getUserRepository(routeParams.name)
   })
 
   return {
