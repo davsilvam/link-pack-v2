@@ -7,12 +7,6 @@
 - [Visual do Projeto](#art-visual-do-projeto)
    - [Desktop e Telas Maiores](#desktop-e-telas-maiores)
    - [Mobile e Telas Menores](#mobile-e-telas-menores)
-- [S.T.A.R.T](#pencil2-start)
-   - [S - Situation](#s---situation)
-   - [T - Tasks](#t---tasks)
-   - [A - Action](#a---action)
-   - [R - Results](#r---results)
-   - [T - Take Away](#t---take-away)
 - [Tecnologias](#wrench-tecnologias)
    - [Construção do site](#construção-do-site)
    - [Estilização](#estilização)
@@ -42,28 +36,6 @@ O Link Pack é um agregador de links inspirado no [Linktree](https://linktr.ee).
 <h1 align="center">
     <img src="./.github/mobile.png" style="width: 40%;">
 </h1>
-
-## :pencil2: **S.T.A.R.T**
-
-### S - Situation
-
-> Fiz esse projeto sozinho, visando criar uma árvore de links para minha página no Instagram.
-
-### T - Tasks
-
-> Meu principal objetivo era criar um lugar onde meus seguidores no Instagram pudessem visualizar os projetos mais facilmente, além de se locomover pelas minhas redes.
-
-### A - Action
-
-> Para isso, criei tanto rotas internas quanto externas, contanto com uma mini galeria dos projetos para o usuário explorar.
-
-### R - Results
-
-> Como resultado, consegui unir várias coisas em um lugar só e simplificar a interação do meu usuário com meus projetos.
-
-### T - Take Away
-
-> Com esse projeto consegui criar um roteamento dinâmico, que carrega repositórios selecionados do GitHub.
 
 ## :wrench: **Tecnologias**
 
